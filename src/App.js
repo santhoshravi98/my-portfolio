@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Auxillary from "../src/HOC/Auxillary/Auxillary";
+import Layout from "../src/HOC/Layout/Layout";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//Main First Route of the Application, We call Layout
+class app extends Component {
+  render() {
+    return (
+      <Auxillary>
+        <Layout />
+      </Auxillary>
+    );
+  }
 }
 
-export default App;
+export default app;
