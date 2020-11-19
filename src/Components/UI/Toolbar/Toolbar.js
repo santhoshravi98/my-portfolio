@@ -1,5 +1,16 @@
 import Headeritems from "../HeaderItems/HeaderItems";
+import ToolbarCss from '../Toolbar/Toolbar.module.css'
+import Logo from '../Logo/Logo'
+import DrawerToggle from "../Sidedrawer/DrawerToggle/DrawerToggle";
 const Toolbar = (props) => {
-  return <Headeritems />;
+  return (
+    <header className={ToolbarCss.Toolbar}>
+      <DrawerToggle refToToggleSideDrawer={props.refToToggleSideDrawer}/>
+      <Logo/>
+    <nav className={ToolbarCss.DesktopOnly}>
+    <Headeritems/>
+    </nav>
+    </header>
+  )
 };
 export default Toolbar;

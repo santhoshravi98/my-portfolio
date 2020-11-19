@@ -1,0 +1,312 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.demo {
+  position: absolute;
+  left: 20%;
+  top: 54%;
+  height: 44px;
+  margin-top: -25px;
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.democoloredblocks {
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  margin-left: -60px;
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-animation: demoAnim 6s ease-in-out infinite, contAnim 6s infinite;
+          animation: demoAnim 6s ease-in-out infinite, contAnim 6s infinite;
+}
+.democoloredblocksrotater {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  -webkit-animation: rotation 1.3s linear infinite;
+          animation: rotation 1.3s linear infinite;
+}
+.democoloredblocksinner {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  background: #306770;
+  border-radius: inherit;
+  text-align: center;
+  color: wheat;
+}
+.democoloredblock {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300%;
+  height: 300%;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+.democoloredblock:nth-child(1) {
+  -webkit-transform: rotate(0deg) skewX(-30deg);
+          transform: rotate(0deg) skewX(-30deg);
+  background-color: #f54343;
+}
+.democoloredblock:nth-child(2) {
+  -webkit-transform: rotate(120deg) skewX(-30deg);
+          transform: rotate(120deg) skewX(-30deg);
+  background-color: #617cf3;
+}
+.democoloredblock:nth-child(3) {
+  -webkit-transform: rotate(240deg) skewX(-30deg);
+          transform: rotate(240deg) skewX(-30deg);
+  background-color: #e0f855;
+}
+.demo__inner {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.demo__numbers {
+  overflow: visible;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  margin-top: -5px;
+}
+.demo__numbers-path {
+  fill: none;
+  stroke-width: 10px;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 0, 518.055065155;
+  stroke-dashoffset: 0;
+  -webkit-animation: numAnim 6s ease-in-out infinite;
+          animation: numAnim 6s ease-in-out infinite;
+  opacity: 0;
+}
+.demotext {
+  position: absolute;
+  left: 44%;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  margin-left: -60px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+  color: #fff;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-animation: hideText 6s infinite;
+          animation: hideText 6s infinite;
+}
+
+@-webkit-keyframes contAnim {
+  15%,
+  100% {
+    margin-left: -60px;
+    width: 120px;
+  }
+  25%,
+  90% {
+    margin-left: -25px;
+    width: 50px;
+  }
+}
+
+@keyframes contAnim {
+  15%,
+  100% {
+    margin-left: -60px;
+    width: 120px;
+  }
+  25%,
+  90% {
+    margin-left: -25px;
+    width: 50px;
+  }
+}
+@-webkit-keyframes numAnim {
+  15% {
+    stroke-dasharray: 0, 518.055065155;
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  25%,
+  41% {
+    opacity: 1;
+    stroke-dasharray: 144.4256591797, 518.055065155;
+    stroke-dashoffset: -40;
+  }
+  53%,
+  66% {
+    stroke-dasharray: 136.0216217041, 518.055065155;
+    stroke-dashoffset: -227.238697052;
+  }
+  76% {
+    stroke-dasharray: 113.4751205444, 518.055065155;
+    stroke-dashoffset: -445.8995704651;
+  }
+  88%,
+  100% {
+    stroke-dasharray: 72.1554946899, 518.055065155;
+    stroke-dashoffset: -445.8995704651;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes numAnim {
+  15% {
+    stroke-dasharray: 0, 518.055065155;
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  25%,
+  41% {
+    opacity: 1;
+    stroke-dasharray: 144.4256591797, 518.055065155;
+    stroke-dashoffset: -40;
+  }
+  53%,
+  66% {
+    stroke-dasharray: 136.0216217041, 518.055065155;
+    stroke-dashoffset: -227.238697052;
+  }
+  76% {
+    stroke-dasharray: 113.4751205444, 518.055065155;
+    stroke-dashoffset: -445.8995704651;
+  }
+  88%,
+  100% {
+    stroke-dasharray: 72.1554946899, 518.055065155;
+    stroke-dashoffset: -445.8995704651;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes rotation {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes demoAnim {
+  15% {
+    border-radius: 20px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  30%,
+  43% {
+    border-radius: 50%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  52%,
+  65% {
+    border-radius: 0;
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+  }
+  78%,
+  90% {
+    border-radius: 50%;
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg);
+  }
+  100% {
+    border-radius: 20px;
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg);
+  }
+}
+@keyframes demoAnim {
+  15% {
+    border-radius: 20px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  30%,
+  43% {
+    border-radius: 50%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  52%,
+  65% {
+    border-radius: 0;
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+  }
+  78%,
+  90% {
+    border-radius: 50%;
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg);
+  }
+  100% {
+    border-radius: 20px;
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg);
+  }
+}
+@-webkit-keyframes hideText {
+  15%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+}
+@keyframes hideText {
+  15%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  96% {
+    opacity: 0;
+  }
+}
+
+@media (max-width:767px){
+    .demo {
+        position: absolute;
+        left: 34%; 
+}
+}
