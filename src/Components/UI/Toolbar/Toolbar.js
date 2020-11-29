@@ -6,7 +6,8 @@ const Toolbar = (props) => {
   return (
     <header className={ToolbarCss.Toolbar}>
       <DrawerToggle refToToggleSideDrawer={props.refToToggleSideDrawer}/>
-      <Logo/>
+      <div onClick={props.refToOpenSideDrawer}><Logo/></div>
+      
     <nav className={ToolbarCss.DesktopOnly}>
     <Headeritems/>
     </nav>

@@ -1,11 +1,11 @@
 import HeaderItem from "../HeaderItem/HeaderItem.js";
-import HeaderItemsCss from '../HeaderItems/HeaderItems.module.css'
+import HeaderItemsCss from '../HeaderItems/Headeritems.module.css'
 const Headeritems = (props) => {
   return (
     <ul className={HeaderItemsCss.NavigationItems}>
-      <HeaderItem link="/" exact>Home</HeaderItem>
-      <HeaderItem link="/" exact>Home</HeaderItem>
-      <HeaderItem link="/" exact>Home</HeaderItem>
+      <HeaderItem link="/" exact>Work</HeaderItem>
+      <HeaderItem link="/" exact>Resume</HeaderItem>
+      <HeaderItem link="/" exact>Feedback</HeaderItem>
     </ul>
   );
 };
