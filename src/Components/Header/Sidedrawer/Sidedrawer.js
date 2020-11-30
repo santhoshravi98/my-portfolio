@@ -1,7 +1,7 @@
 import React from "react";
-import HeaderItems from "../HeaderItems/HeaderItems";
+import HeaderItems from "../../Header/HeaderItems/HeaderItems";
 import Auxillary from "../../../HOC/Auxillary/Auxillary";
-import Backdrop from "../Backdrop/Backdrop";
+import Backdrop from '../../UI/Backdrop/Backdrop'
 import SidedrawerCss from "../Sidedrawer/Sidedrawer.module.css";
 const Sidedrawer = (props) => {
   let sideDrawerCss = [SidedrawerCss.SideDrawer, SidedrawerCss.Close];

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Toolbar from "../../Components/UI/Toolbar/Toolbar";
-import Sidedrawer from "../../../src/Components/UI/Sidedrawer/Sidedrawer";
+import Toolbar from "../../Components/Header/Toolbar/Toolbar";
+import Sidedrawer from '../../Components/Header/Sidedrawer/Sidedrawer'
 import Auxillary from "../Auxillary/Auxillary";
 import cssClasses from "../Layout/Layout.module.css";
 //Overall Layout for the Application

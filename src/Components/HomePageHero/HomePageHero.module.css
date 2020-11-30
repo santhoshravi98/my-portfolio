@@ -1,0 +1,31 @@
+.container {
+	background: #fff;
+	display: block;
+	clear: both;
+}
+.hero {
+	height: calc(80vh - 120px);
+	min-height: 200px;
+}
+
+.hero__title {
+	font-weight: 300;
+	font-size: 42px;
+}
+
+.hero__text {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.hero__sub {
+	font-size: 24px;
+}
+.hero__underline {
+	background: rgba(33, 150, 243, 1);
+	height: 2px;
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 100px;
+}
