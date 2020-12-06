@@ -312,7 +312,37 @@ body {
     margin-top: -74px;
   }
   
-  .listarfeatureiconinner {
+  .listarfeatureiconinnerone {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 500px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.14);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 27%;
+    background-image: url(../../Assets/Images/profile_photo.jpg);
+  }
+
+  .listarfeatureiconinnertwo {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 500px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.14);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 27%;
+    background-image: url(../../Assets/Images/what_i_do.jpg);
+  }
+
+  .listarfeatureiconinnerthree {
     width: 120px;
     height: 120px;
     line-height: 120px;

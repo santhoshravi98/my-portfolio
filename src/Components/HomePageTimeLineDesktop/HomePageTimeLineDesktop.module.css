@@ -1,0 +1,103 @@
+body {
+    font-family: 'Source Sans Pro', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+}
+.timeline {
+    display: flex;
+    background-color: #031625;
+}
+.timeline:hover .tlitem {
+    width: 23.3333%;
+}
+.tlitem {
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    width: 25%;
+    height: 60vh;
+    min-height: 450px;
+    color: #fff;
+    overflow: hidden;
+    transition: width 0.5s ease;
+}
+.tlitem:before, .tlitem:after {
+    transform: translate3d(0, 0, 0);
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.tlitem:after {
+    background: rgba(3, 22, 37, 0.85);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+.tlitem:before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 25%) 75%);
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(0, 0, 0) translateY(50%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.tlitem:hover {
+    width: 30% !important;
+}
+.tlitem:hover:after {
+    opacity: 0;
+}
+.tlitem:hover:before {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) translateY(0);
+    transition: opacity 1s ease, transform 1s ease 0.25s;
+}
+.tlitem:hover .tlcontent {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.75s ease 0.5s;
+}
+.tlitem:hover .tlbg {
+    filter: grayscale(0);
+}
+.tlcontent {
+    transform: translate3d(0, 0, 0) translateY(25px);
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 0 1.618em;
+    top: 55%;
+    opacity: 0;
+}
+.tlcontent h1 {
+    font-family: 'Pathway Gothic One', Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #1779cf;
+    font-size: 1.44rem;
+    font-weight: normal;
+}
+.tlyear {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    border-top: 1px solid rgb(219, 12, 12);
+    border-bottom: 1px solid rgba(9, 255, 21, 0.788);
+}
+.tlyear p {
+    font-family: 'Pathway Gothic One', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1.728rem;
+}
+.tlbg {
+    transform: translate3d(0, 0, 0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center center;
+    transition: filter 0.5s ease;
+    filter: grayscale(100%);
+}

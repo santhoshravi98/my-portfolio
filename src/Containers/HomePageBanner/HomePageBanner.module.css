@@ -1,0 +1,12 @@
+
+    @media (min-width: 768px){ 
+        .mobileonly { 
+      display: none; 
+    } 
+  } 
+  
+    @media (max-width: 767px){ 
+        .desktoponly { 
+      display: none; 
+    } 
+  } 

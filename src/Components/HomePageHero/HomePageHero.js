@@ -9,6 +9,9 @@ import {
   faSmileWink,
   faGrin,
   faIdCardAlt,
+  faHandshake,
+  faBug,
+  faGrinSquintTears
 } from "@fortawesome/free-solid-svg-icons";
 const classes = classLister(css);
 const HomePageHero = (props) => {
@@ -54,7 +57,7 @@ const HomePageHero = (props) => {
                   <div className={css.listarfeaturerightborder}></div>
                   <div className={css.listarfeatureblockcontentwrapper}>
                     <div className={css.listarfeatureiconwrapper}>
-                      <div className={css.listarfeatureiconinner}></div>
+                      <div className={css.listarfeatureiconinnerone}></div>
                     </div>
                     <div
                       className={css.listarfeaturecontentwrapper}
@@ -68,15 +71,14 @@ const HomePageHero = (props) => {
                       >
                         <span>
                           <span>
-                            {" "}
                             <FontAwesomeIcon icon={faSmile} />
                           </span>
                           Quick Introduction
                         </span>
                       </div>
                       <div className={css.listarfeatureitemexcerpt}>
-                        Start publish listings to show everyone the details and
-                        goodies of your establishment.
+                        First of all Thanks for Checking In <FontAwesomeIcon icon={faHandshake} />
+                        
                       </div>
                     </div>
                   </div>
@@ -113,14 +115,7 @@ const HomePageHero = (props) => {
                   <div className={css.listarfeaturerightborder}></div>
                   <div className={css.listarfeatureblockcontentwrapper}>
                     <div className={css.listarfeatureiconwrapper}>
-                      <div className={css.listarfeatureiconinner}>
-                        <div>
-                          <img
-                            alt="Customers"
-                            className={css.listarimageicon}
-                            src="https://image.flaticon.com/icons/svg/1899/1899506.svg"
-                          />
-                        </div>
+                      <div className={css.listarfeatureiconinnertwo}>
                       </div>
                     </div>
                     <div
@@ -137,12 +132,16 @@ const HomePageHero = (props) => {
                           <span>
                             <FontAwesomeIcon icon={faSmileWink} />
                           </span>
-                          Customers
+                          What I Do
                         </span>
                       </div>
                       <div className={css.listarfeatureitemexcerpt}>
-                        Easily find interesting places by local experts, save
-                        time by checking listing features.{" "}
+                        I am a Software Engineer by Profession and specialised in making Bugs <FontAwesomeIcon icon={faBug} />
+                        Learning new things and have a list of TODO(will update here soon). 
+                        <p>
+                          Note : You can also help me in any means
+                        </p>
+                        .....
                       </div>
                     </div>
                   </div>
@@ -179,14 +178,7 @@ const HomePageHero = (props) => {
                   <div className={css.listarfeaturerightborder}></div>
                   <div className={css.listarfeatureblockcontentwrapper}>
                     <div className={css.listarfeatureiconwrapper}>
-                      <div className={css.listarfeatureiconinner}>
-                        <div>
-                          <img
-                            alt="Feedback"
-                            className="listar-image-icon"
-                            src="https://image.flaticon.com/icons/svg/1899/1899604.svg"
-                          />
-                        </div>
+                      <div className={css.listarfeatureiconinnerthree}>
                       </div>
                     </div>
                     <div
@@ -203,12 +195,14 @@ const HomePageHero = (props) => {
                           <span>
                             <FontAwesomeIcon icon={faGrin} />
                           </span>
-                          Feedback
+                          About this Site
                         </span>
                       </div>
                       <div className={css.listarfeatureitemexcerpt}>
-                        Visitors discuss listings to share experiences, so
-                        businesses get reputation consolidated.{" "}
+                        I just wanted to try this out because WHY NOT ?
+                        Contains Personal Information, Stories and blah blah blah. <FontAwesomeIcon icon={faGrinSquintTears} /> 
+                        <p>Please feel free to contact me for posting your valuable content which could be useful to the society.
+                          </p>
                       </div>
                     </div>
                   </div>
