@@ -3,6 +3,7 @@ import Toolbar from "../../Components/Header/Toolbar/Toolbar";
 import Sidedrawer from '../../Components/Header/Sidedrawer/Sidedrawer'
 import Auxillary from "../Auxillary/Auxillary";
 import cssClasses from "../Layout/Layout.module.css";
+import Footer from '../../Components/Footer/Footer'
 //Overall Layout for the Application
 class Layout extends Component {
   //A State to decide whether to show sidedrawer or not
@@ -32,6 +33,7 @@ class Layout extends Component {
           showSideDrawer={this.state.showSideDrawer}
         />
         <main className={cssClasses.Content}>{this.props.children}</main>
+        <Footer/>
       </Auxillary>
     );
   }

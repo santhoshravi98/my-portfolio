@@ -8,7 +8,7 @@ const HomePageTimeLineMobile = (props) => {
         <h1>Timeline</h1>
 
         <ul className={css.timeline}>
-          <li class="event" data-date="65Million B.C.">
+          <li className="event" data-date="65Million B.C.">
             <h3>Dinosaurs Roamed the Earth</h3>
             <p>RAWWWWWWRRR 🐢🦂</p>
           </li>
