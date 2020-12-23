@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+#comments {
+  font-size: 18pt;
+  height: 42px;
+  width : 300px;
+}
 .loginpage {
   width: 360px;
   padding: 8% 0 0;

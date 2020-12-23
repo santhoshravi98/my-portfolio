@@ -1,52 +1,62 @@
 import React, { Component } from 'react'
 import css from '../Feedback/Feedback.module.css'
 import Quote from '../../Components/Quote/Quote'
+import * as FeedbackActionCreator from '../../Store/Actions/FeedbackActionCreator'
 import Auxillary from '../../HOC/Auxillary/Auxillary'
+import { connect } from 'react-redux'
 class Feedback extends Component {
     state = {
         FeedbackForm: {
             name: {
-                elementType: "input",
                 elementConfig: {
                     type: "text",
                     placeholder: "Enter Name"
                 },
-                value: "",
-                validationRules: {
-                    required: true,
-                },
-                validationPassed: false,
-                hasTouched: false
+                value: ""
             },
             email: {
-                elementType: "input",
                 elementConfig: {
                     type: "email",
                     placeholder: "Enter Email"
                 },
-                value: "",
-                validationRules: {
-                    required: true
-                },
-                validationPassed: false,
-                hasTouched: false,
+                value: ""
             },
             comments: {
-                elementType: "input",
                 elementConfig: {
                     type: "text",
                     placeholder: "I am still learning...........Please provide your feedback"
                 },
-                value: "",
-                validationRules: {
-                    required: true
-                },
-                validationPassed: false,
-                hasTouched: false
+                value: ""
             }
         },
         overallFormValid: false
     };
+
+    onChangeHandler = (event, id) => {
+        const formData = {
+            ...this.state.FeedbackForm
+        }
+        const singleFormData = {
+            ...this.state.FeedbackForm[id]
+        }
+        singleFormData.value = event.target.value;
+        singleFormData.hasTouched = true;
+        formData[id] = singleFormData;
+        this.setState({
+            FeedbackForm: formData
+        });
+    }
+
+    formSubmitHandler = (event) => {
+        event.preventDefault();
+        let info = {};
+        for (let i in this.state.FeedbackForm) {
+            info[i] = this.state.FeedbackForm[i];
+        }
+        let userInfo = info;
+
+    }
+
     render() {
         let dynamicDiv = null;
         let elementsArray = [];
@@ -59,17 +69,19 @@ class Feedback extends Component {
         dynamicDiv = (
             <div className={css.loginpage}>
                 <div className={css.form}>
-                    <form className="login-form">
+                    <form className="login-form" onSubmit={this.formSubmitHandler}>
                         {elementsArray.map((iterator) => {
                             return (
                                 <input key={iterator.id}
-                                        className={iterator.id}
+                                    className={iterator.id}
                                     type={iterator.configuration.elementConfig.type}
-                                    placeholder={iterator.configuration.elementConfig.placeholder} />
+                                    placeholder={iterator.configuration.elementConfig.placeholder}
+                                    onChange={(event) => { this.onChangeHandler(event, iterator.id) }}
+                                    value={iterator.value}
+                                    required />
                             )
                         })}
-                        <button>login</button>
-                        <p className={css.message}>Not registered? <a href="#">Create an account</a></p>
+                        <button>Submit</button>
                     </form>
                 </div>
             </div>
@@ -81,4 +93,19 @@ class Feedback extends Component {
         )
     }
 }
-export default Feedback;
+
+const mapStateToProps = (state) => {
+    return {
+        feedBackInfo: state.FeedbackReducer.feedBackData
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        postFeedback: (data) => {
+            dispatch(FeedbackActionCreator.postFeedback(data));
+        }
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Feedback);
