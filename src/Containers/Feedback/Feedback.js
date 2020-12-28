@@ -1,9 +1,24 @@
-import React, { Component } from 'react'
+import React, { useState, Component } from 'react'
 import css from '../Feedback/Feedback.module.css'
 import Quote from '../../Components/Quote/Quote'
 import * as FeedbackActionCreator from '../../Store/Actions/FeedbackActionCreator'
 import Auxillary from '../../HOC/Auxillary/Auxillary'
+import LoadingModal from '../../Components/UI/Spinner/Spinner'
 import { connect } from 'react-redux'
+import Message from '../../Components/Message/Message'
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)'
+    }
+};
+Modal.setAppElement('#root');
 class Feedback extends Component {
     state = {
         FeedbackForm: {
@@ -29,7 +44,8 @@ class Feedback extends Component {
                 value: ""
             }
         },
-        overallFormValid: false
+        showLoadingModal: false,
+        showModal: true
     };
 
     onChangeHandler = (event, id) => {
@@ -51,10 +67,18 @@ class Feedback extends Component {
         event.preventDefault();
         let info = {};
         for (let i in this.state.FeedbackForm) {
-            info[i] = this.state.FeedbackForm[i];
+            info[i] = this.state.FeedbackForm[i].value;
         }
         let userInfo = info;
+        userInfo.date = new Date();
+        this.setState({
+            showLoadingModal: true
+        });
+        this.props.postFeedback(userInfo);
+    }
 
+    closeModal = () => {
+        window.location.href = "/";
     }
 
     render() {
@@ -66,26 +90,53 @@ class Feedback extends Component {
                 configuration: this.state.FeedbackForm[i]
             })
         }
-        dynamicDiv = (
-            <div className={css.loginpage}>
-                <div className={css.form}>
-                    <form className="login-form" onSubmit={this.formSubmitHandler}>
-                        {elementsArray.map((iterator) => {
-                            return (
-                                <input key={iterator.id}
-                                    className={iterator.id}
-                                    type={iterator.configuration.elementConfig.type}
-                                    placeholder={iterator.configuration.elementConfig.placeholder}
-                                    onChange={(event) => { this.onChangeHandler(event, iterator.id) }}
-                                    value={iterator.value}
-                                    required />
-                            )
-                        })}
-                        <button>Submit</button>
-                    </form>
+        if (this.state.showLoadingModal) {
+            dynamicDiv = (
+                <div id="#main"><LoadingModal />
+                </div>);
+        }
+        else {
+            dynamicDiv = (
+                <div id="#main">
+                    <div className={css.loginpage}>
+                        <div className={css.form}>
+                            <form className="login-form" onSubmit={this.formSubmitHandler}>
+                                {elementsArray.map((iterator) => {
+                                    return (
+                                        <input key={iterator.id}
+                                            className={iterator.id}
+                                            type={iterator.configuration.elementConfig.type}
+                                            placeholder={iterator.configuration.elementConfig.placeholder}
+                                            onChange={(event) => { this.onChangeHandler(event, iterator.id) }}
+                                            value={iterator.value}
+                                            required />
+                                    )
+                                })}
+                                <button>Submit</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        }
+        if (this.props.location.search.indexOf("success=true") > 0) {
+            dynamicDiv = (<Modal
+                isOpen={this.state.showModal}
+                style={customStyles}
+                contentLabel="Success or Failure Modal"
+            >
+                <Message refToCloseModal={this.closeModal} isSuccesMessage={true} />
+            </Modal>)
+        }
+        else if (this.props.location.search.indexOf("failure=true") > 0) {
+            dynamicDiv = (<Modal
+                isOpen={this.state.showModal}
+                style={customStyles}
+                contentLabel="Success or Failure Modal"
+            >
+                <Message refToCloseModal={this.closeModal} isSuccesMessage={false} />
+            </Modal>)
+        }
         return (
             <Auxillary>
                 {dynamicDiv}
@@ -96,7 +147,8 @@ class Feedback extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        feedBackInfo: state.FeedbackReducer.feedBackData
+        feedBackInfo: state.FeedbackReducer.feedBackData,
+        errorMessage: state.FeedbackReducer.errorMessage
     }
 }
 
@@ -108,4 +160,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Feedback);
+export default connect(mapStateToProps, mapDispatchToProps)(Feedback);  

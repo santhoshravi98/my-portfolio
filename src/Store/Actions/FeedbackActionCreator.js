@@ -20,8 +20,10 @@ export const postFeedback = (data) => {
         Axios.post("/feedback.json", data).then((response) => {
             const feedBackData = data;
             dispatch(postFeedbackSuccess(feedBackData));
+            window.location.href = "/feedback?success=true";
         }).catch((response) => {
-            dispatch(postFeedbackFailure());
+            dispatch(postFeedbackFailure(response.data));
+            window.location.href="/feedback?failure=true&errormessage=" + response.data;
         })
     }
 }

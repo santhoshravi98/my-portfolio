@@ -1,6 +1,7 @@
 import * as ActionTypes from "../Actions/ActionTypes";
 let initialState = {
-    feedBackData: []
+    feedBackData: [],
+    errorMessage : ''
 }
 
 const reducer = (state = initialState, action) => {
@@ -10,13 +11,15 @@ const reducer = (state = initialState, action) => {
                 const arrayOfFeedbackObjects = state.feedBackData.concat(action.value);
                 return {
                     ...state,
-                    feedBackData: arrayOfFeedbackObjects
+                    feedBackData: arrayOfFeedbackObjects,
+                    errorMessage : '',
                 }
             }
         case ActionTypes.ADD_FEEDBACK_FAILURE:
             {
                 return {
-                    ...state
+                    ...state,
+                    errorMessage : action.value
                 }
             }
         default:
