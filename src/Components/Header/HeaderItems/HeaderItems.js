@@ -1,13 +1,14 @@
 import HeaderItem from "../HeaderItem/HeaderItem.js";
 import HeaderItemsCss from '../HeaderItems/Headeritems.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLaptop, faFileInvoice, faComments } from '@fortawesome/free-solid-svg-icons'
+import { faLaptop, faFileInvoice, faComments, faCompass } from '@fortawesome/free-solid-svg-icons'
 const Headeritems = (props) => {
     return (
         <ul className={HeaderItemsCss.NavigationItems}>
             <HeaderItem link="/" exact><FontAwesomeIcon icon={faLaptop} /> Work</HeaderItem>
             <HeaderItem link="/" exact><FontAwesomeIcon icon={faFileInvoice} /> Resume</HeaderItem>
             <HeaderItem link="/feedback" exact><FontAwesomeIcon icon={faComments} /> Feedback</HeaderItem>
+            <HeaderItem link="/stories" exact><FontAwesomeIcon icon={faCompass} /> Travel Stories</HeaderItem>
         </ul>
     );
 };

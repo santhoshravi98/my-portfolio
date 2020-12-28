@@ -4,6 +4,7 @@ import Layout from "../src/HOC/Layout/Layout";
 import { Route, Switch } from "react-router-dom";
 import HomePageBanner from "../src/Containers/HomePageBanner/HomePageBanner";
 import Feedback from '../src/Containers/Feedback/Feedback.js'
+import Stories from '../src/Containers/Stories/StoriesHomePage'
 
 //Main First Route of the Application, We call Layout
 class app extends Component {
@@ -14,6 +15,7 @@ class app extends Component {
           <Switch>
             <Route path="/" exact component={HomePageBanner} />
             <Route path="/feedback" exact component={Feedback} />
+            <Route path="/stories" exact component = {Stories}/>
           </Switch>
         </Layout>
       </Auxillary>
