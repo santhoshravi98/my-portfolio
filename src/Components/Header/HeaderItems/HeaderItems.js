@@ -5,8 +5,8 @@ import { faLaptop, faFileInvoice, faComments, faCompass } from '@fortawesome/fre
 const Headeritems = (props) => {
     return (
         <ul className={HeaderItemsCss.NavigationItems}>
-            <HeaderItem link="/" exact><FontAwesomeIcon icon={faLaptop} /> Work</HeaderItem>
             <HeaderItem link="/" exact><FontAwesomeIcon icon={faFileInvoice} /> Resume</HeaderItem>
+            <HeaderItem link="/work-experience" exact><FontAwesomeIcon icon={faLaptop} /> Work</HeaderItem>
             <HeaderItem link="/feedback" exact><FontAwesomeIcon icon={faComments} /> Feedback</HeaderItem>
             <HeaderItem link="/stories" exact><FontAwesomeIcon icon={faCompass} /> Travel Stories</HeaderItem>
         </ul>

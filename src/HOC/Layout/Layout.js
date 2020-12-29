@@ -33,7 +33,7 @@ class Layout extends Component {
           showSideDrawer={this.state.showSideDrawer}
         />
         <main className={cssClasses.Content}>{this.props.children}</main>
-        <Footer/>
+        <Footer />
       </Auxillary>
     );
   }
