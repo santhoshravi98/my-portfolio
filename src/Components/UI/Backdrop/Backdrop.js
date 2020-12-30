@@ -6,7 +6,7 @@ const backdrop = (props) => {
     backdropDiv = (
       <div
         className={BackdropCss.Backdrop}
-        onClick={props.refToCloseModalFunction}
+        onClick={props.refToToggleSideDrawer}
       ></div>
     );
   }

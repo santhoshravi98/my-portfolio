@@ -1,49 +1,4 @@
-:root {
-    --color-brand-primary: black;
-    --color-brand-primary-h: 251;
-    --color-brand-primary-s: 43%;
-    --color-brand-primary-l: 43%;
-    --color-brand-accent: hsl(var(--color-brand-accent-h), 96%, 61%);
-    --color-brand-accent-h: 16;
-    --color-brand-accent-s: 96%;
-    --color-brand-accent-l: 61%;
-    --color-brand-accent-bg: hsl(calc(var(--color-brand-accent-h) + 17), 100%, 96%);
-    --ratio: 1.4;
-    --s-6: calc(var(--s-5) / var(--ratio));
-    --s-5: calc(var(--s-4) / var(--ratio));
-    --s-4: calc(var(--s-3) / var(--ratio));
-    --s-3: calc(var(--s-2) / var(--ratio));
-    --s-2: calc(var(--s-1) / var(--ratio));
-    --s-1: calc(var(--s0) / var(--ratio));
-    --s0: calc(1.05rem + 0.333vw);
-    --s1: calc(var(--s0) * var(--ratio));
-    --s2: calc(var(--s1) * var(--ratio));
-    --s3: calc(var(--s2) * var(--ratio));
-    --s4: calc(var(--s3) * var(--ratio));
-    --s5: calc(var(--s4) * var(--ratio));
-    --s6: calc(var(--s5) * var(--ratio));
-    font-size: 62.5%;
-    line-height: 1.6;
-    box-sizing: border-box;
-  }
-  @media (min-width: 40.625em) {
-    :root {
-      --s0: calc(1.25rem + 0.333vw);
-    }
-  }
-  @media (min-width: 48em) {
-    :root {
-      --s0: calc(1.4rem + 0.333vw);
-    }
-  }
-  @media (min-width: 62em) {
-    :root {
-      --s0: calc(1.6rem + 0.333vw);
-    }
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+
   body {
     font-size: 1.4rem;
     font-family: 'Inter', sans-serif;
@@ -288,7 +243,7 @@
     }
   }
   .cservicesitem h3 {
-    color: var(--color-brand-primary);
+    color: black;
     font-size: var(--s1);
     letter-spacing: -0.04em;
     line-height: 1.2;
@@ -316,7 +271,7 @@
     color: hsla(var(--color-brand-primary-h), var(--color-brand-primary-s), var(--color-brand-primary-l), 0.65);
   }
   .cservicesitem:hover {
-    background-color: rgba(230, 94, 230, 0.26);
+    background-color: rgba(12, 0, 12, 0.836);
   }
   @media (min-width: 40.625em) {
     .cservicesitem:hover {

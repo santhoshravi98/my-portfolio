@@ -17,9 +17,11 @@ class Layout extends Component {
     });
   };
 
-  ToggleSidedrawerHandler = (prevState) => {
-    this.setState({
-      showSideDrawer: !prevState.showSideDrawer,
+  ToggleSidedrawerHandler = () => {
+    this.setState((prevState) => {
+      return {
+        showSideDrawer: !prevState.showSideDrawer,
+      }
     });
   };
 

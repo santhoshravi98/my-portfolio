@@ -5,12 +5,12 @@ import DrawerToggle from "../Sidedrawer/DrawerToggle/DrawerToggle"
 const Toolbar = (props) => {
   return (
     <header className={ToolbarCss.Toolbar}>
-      <DrawerToggle refToToggleSideDrawer={props.refToToggleSideDrawer}/>
-      <div onClick={props.refToOpenSideDrawer}><Logo/></div>
-      
-    <nav className={ToolbarCss.DesktopOnly}>
-    <Headeritems/>
-    </nav>
+      <DrawerToggle refToToggleSideDrawer={props.refToToggleSideDrawer} />
+      <div onClick={props.refToOpenSideDrawer}><Logo /></div>
+
+      <nav className={ToolbarCss.DesktopOnly}>
+        <Headeritems />
+      </nav>
     </header>
   )
 };

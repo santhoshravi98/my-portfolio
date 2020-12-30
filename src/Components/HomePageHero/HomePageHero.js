@@ -28,7 +28,6 @@ const HomePageHero = (props) => {
             </span>
           </div>
         </div>
-        <div className={css.footerwave}></div>
       </header>
       <div className={css.pset}>
         <div className="container">
@@ -78,7 +77,7 @@ const HomePageHero = (props) => {
                       </div>
                       <div className={css.listarfeatureitemexcerpt}>
                         First of all Thanks for Checking In <FontAwesomeIcon icon={faHandshake} />
-                        
+
                       </div>
                     </div>
                   </div>
@@ -137,7 +136,7 @@ const HomePageHero = (props) => {
                       </div>
                       <div className={css.listarfeatureitemexcerpt}>
                         I am a Software Engineer by Profession and specialised in making Bugs <FontAwesomeIcon icon={faBug} />
-                        Learning new things and have a list of TODO(will update here soon). 
+                        Learning new things and have a list of TODO(will update here soon).
                         <p>
                           Note : You can also help me in any means
                         </p>
@@ -200,7 +199,7 @@ const HomePageHero = (props) => {
                       </div>
                       <div className={css.listarfeatureitemexcerpt}>
                         I just wanted to try this out because WHY NOT ?
-                        Contains Personal Information, Stories and blah blah blah. <FontAwesomeIcon icon={faGrinSquintTears} /> 
+                        Contains Personal Information, Stories and blah blah blah. <FontAwesomeIcon icon={faGrinSquintTears} />
                         <p>Please feel free to contact me for posting your valuable content which could be useful to the society.
                           </p>
                       </div>

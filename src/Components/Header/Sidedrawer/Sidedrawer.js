@@ -10,10 +10,10 @@ const Sidedrawer = (props) => {
   }
   return (
     <Auxillary>
-      <Backdrop />
+      <Backdrop showBackdrop={props.showSideDrawer} refToToggleSideDrawer={props.refToToggleSideDrawer} />
       <div
         className={sideDrawerCss.join(" ")}
-        onClick={props.refToCloseSideDrawer}
+        onClick={props.refToToggleSideDrawer}
       >
         <nav>
           <HeaderItems />
