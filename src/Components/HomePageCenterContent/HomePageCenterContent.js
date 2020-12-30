@@ -13,17 +13,17 @@ const HomePageCenterContent = (props) => {
   return (
     <Auxillary>
       <section className={css.csection}>
-        <h2 className={css.csectiontitle}>
-          <span>Our Services</span>
-        </h2>
+        <h6 className={css.csectiontitle}>
+          <span>Yes You Can</span>
+        </h6>
         <ul className={css.cservices}>
           <HomePageCenterContentTileOne />
-          <HomePageCenterContentTileTwo/>
-          <HomePageCenterContentTileThree/>
-          <HomePageCenterContentTileFour/>
-          <HomePageCenterContentTileFive/>
-         <HomePageCenterContentTileSix/>
-         
+          <HomePageCenterContentTileTwo />
+          <HomePageCenterContentTileThree />
+          <HomePageCenterContentTileFour />
+          <HomePageCenterContentTileFive />
+          <HomePageCenterContentTileSix />
+
         </ul>
       </section>
     </Auxillary>

@@ -342,8 +342,8 @@ body {
   }
 
   .listarfeatureiconinnerthree {
-    width: 120px;
-    height: 120px;
+    width: 114px;
+    height: 108px;
     line-height: 120px;
     border-radius: 500px;
     position: relative;
@@ -353,7 +353,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 27%;
-    background-image: url(../../Assets/Images/profile_photo.jpg);
+    background-image: url(../../Assets//Images/about.jpg);
   }
   
   .listarfeatureiconinner div {

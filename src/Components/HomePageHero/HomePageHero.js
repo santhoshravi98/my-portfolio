@@ -51,7 +51,6 @@ const HomePageHero = (props) => {
                   css.listarfeaturehaslink
                 )}
               >
-                <a href="https://bit.ly/3aX1PHf" target="_blank"></a>
                 <div className={css.listarfeatureiteminner}>
                   <div className={css.listarfeaturerightborder}></div>
                   <div className={css.listarfeatureblockcontentwrapper}>
@@ -76,8 +75,12 @@ const HomePageHero = (props) => {
                         </span>
                       </div>
                       <div className={css.listarfeatureitemexcerpt}>
-                        First of all Thanks for Checking In <FontAwesomeIcon icon={faHandshake} />
-
+                        <p>
+                          First of all Thanks for Checking In. <FontAwesomeIcon icon={faHandshake} />
+                           I'm from Coonoor, a very beautiful small
+                          town in the district of Nilgiris. Did my Schooling in Stanes, Coonoor and B.E-C.S.E in CEG, Chennai.
+                          Interested in trying out new things and happy to accept failures.
+                          </p>
                       </div>
                     </div>
                   </div>
@@ -109,7 +112,6 @@ const HomePageHero = (props) => {
                   css.listarfeaturehaslink
                 )}
               >
-                <a href="https://bit.ly/3aX1PHf" target="_blank"></a>
                 <div className={css.listarfeatureiteminner}>
                   <div className={css.listarfeaturerightborder}></div>
                   <div className={css.listarfeatureblockcontentwrapper}>
@@ -135,7 +137,7 @@ const HomePageHero = (props) => {
                         </span>
                       </div>
                       <div className={css.listarfeatureitemexcerpt}>
-                        I am a Software Engineer by Profession and specialised in making Bugs <FontAwesomeIcon icon={faBug} />
+                        I am a Software Engineer by Profession. I like my job and specialised in making Bugs <FontAwesomeIcon icon={faBug} />
                         Learning new things and have a list of TODO(will update here soon).
                         <p>
                           Note : You can also help me in any means
@@ -172,7 +174,6 @@ const HomePageHero = (props) => {
                   css.listarfeaturehaslink
                 )}
               >
-                <a href="https://bit.ly/3aX1PHf" target="_blank"></a>
                 <div className={css.listarfeatureiteminner}>
                   <div className={css.listarfeaturerightborder}></div>
                   <div className={css.listarfeatureblockcontentwrapper}>
@@ -199,8 +200,8 @@ const HomePageHero = (props) => {
                       </div>
                       <div className={css.listarfeatureitemexcerpt}>
                         I just wanted to try this out because WHY NOT ?
-                        Contains Personal Information, Stories and blah blah blah. <FontAwesomeIcon icon={faGrinSquintTears} />
-                        <p>Please feel free to contact me for posting your valuable content which could be useful to the society.
+                        Contains Personal Information, Work Information, Travel Dairies and blah blah blah. <FontAwesomeIcon icon={faGrinSquintTears} />
+                        <p>Please feel free to contact me for posting your valuable content which could be useful to the society. Thanks in Advance. 🙂
                           </p>
                       </div>
                     </div>
