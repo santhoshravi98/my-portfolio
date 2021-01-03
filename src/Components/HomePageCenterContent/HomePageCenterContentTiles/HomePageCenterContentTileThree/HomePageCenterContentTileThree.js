@@ -5,12 +5,9 @@ const HomePageCenterContentThree = (props) => {
   return (
     <Auxillary>
       <li className={css.cservicesitem}>
-        <h3>Front End Development</h3>
+        <h3>Database</h3>
         <p>
-          We are Front End masters with a deep focus on HTML, CSS. The result of
-          our work is a responsive, accessible, and performant websites. Either
-          you have the design ready and want us to code it, or you want us to do
-          both design and code to do so.
+          Worked in SQL for Office Projects and also have done few of my College Works. Also worked in Elastic Search as part of my Office Project. Both of these remain my favourites. Wanted to try out few other flexible ones. I would be very happy if I get any other suggestions. 
         </p>
       </li>
     </Auxillary>

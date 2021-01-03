@@ -5,11 +5,9 @@ const HomePageCenterContentTwo = (props) => {
   return (
     <Auxillary>
       <li className={css.cservicesitem}>
-        <h3>UX Auditing</h3>
+        <h3>Programming Languages</h3>
         <p>
-          If you are unsure of how your app behaves, we can help by doing a
-          detailed UX audit that will highlight most of the issues in your
-          product. From there, we can take it further and fix all issues.
+          I have worked with C# as part of my office project. C/C++ is also something which laid my basic foundation. Also worked with PHP and a bit of Python as my College Projects
         </p>
       </li>
     </Auxillary>

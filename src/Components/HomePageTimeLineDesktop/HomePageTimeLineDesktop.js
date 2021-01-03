@@ -8,7 +8,7 @@ const HomePageTimeLineDesktop = (props) => {
           <div
             className={css.tlbg}
             style={{
-              backgroundImage: "url(https://placeimg.com/801/801/nature)",
+              backgroundImage: 'url(static/media/profile_photo.jpg)',
             }}
           ></div>
 

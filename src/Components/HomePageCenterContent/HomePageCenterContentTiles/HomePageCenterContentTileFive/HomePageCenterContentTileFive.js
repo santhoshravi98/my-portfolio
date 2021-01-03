@@ -5,11 +5,9 @@ const HomePageCenterContentFour = (props) => {
   return (
     <Auxillary>
       <li className={css.cservicesitem}>
-        <h3>Mobile Apps Design</h3>
+        <h3>Hobbies</h3>
         <p>
-          To reach more customers and the goals of your business, a mobile
-          application is necessary these days. We will work on the app design
-          from scratch to final tested prototype.
+          OK. Technical stuff is enough. Coming to Hobbies, I watch Movies(Tamil, English, Malayalam) and Series(English), Playing Cricket with friends always pulls me in. Playing Table Tennis has also been my recent addiction. Following Tech Reviews and Vlogs has become my recent Hobbies. 
         </p>
       </li>
     </Auxillary>

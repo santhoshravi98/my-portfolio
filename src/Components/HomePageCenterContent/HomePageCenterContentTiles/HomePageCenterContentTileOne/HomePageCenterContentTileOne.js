@@ -5,11 +5,9 @@ const HomePageCenterContentOne = (props) => {
   return (
     <Auxillary>
       <li className={css.cservicesitem}>
-        <h3>Responsive Wseb Design</h3>
+        <h3>My Suggestions/Favourites</h3>
         <p>
-          We leverage the concept of mobile-first design. Through our work, we
-          focus on designing an experience that works across different screen
-          sizes.
+         I always will to share my thoughts. Series that I suggest include Game of Thrones, Breaking Bad, Peaky Blinders, Stranger Things. <a href="https://www.youtube.com/user/marquesbrownlee" target="_blank" rel="noopener noreferrer">MKBHD</a> is my fav.Tech Guy in Youtube. <a href="https://www.google.com/search?q=maximilian+schwarzm%C3%BCller&rlz=1C1GCEU_en-GBIN912IN912&oq=max&aqs=chrome.1.69i57j69i59.1717j0j1&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">Maximilian Schwarzmüller</a> is one Tutor whom I always Inspire. My favourite movies list is very big to post, Ping me Let's Discuss.
         </p>
       </li>
     </Auxillary>

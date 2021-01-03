@@ -5,11 +5,9 @@ const HomePageCenterContentFour = (props) => {
   return (
     <Auxillary>
       <li className={css.cservicesitem}>
-        <h3>UX Research</h3>
+        <h3>Web Development - Front End</h3>
         <p>
-          It&rsquo;s important to research deeply for the product you want to
-          build. We help in that by defining the user audience, working on user
-          stories, competitive analysis and much more.{" "}
+          I always like playing with Front End Part of Web Development. Some of my favourites include React JS, Handlebar JS. This Site is Completed built with React JS.
         </p>
       </li>
     </Auxillary>

@@ -5,11 +5,9 @@ const HomePageCenterContentFour = (props) => {
   return (
     <Auxillary>
       <li className={css.cservicesitem}>
-        <h3>UX Consultation</h3>
+        <h3>Projects</h3>
         <p>
-          If you don&rsquo;t know what kind of service to request from us,
-          don&rsquo;t worry. We can help and see what fits your business and
-          your budget.
+          A Machine Learning Emotion Identifier using Cognitive Learning. An Auction System for properties with Live Bidding Engine. Some of my ideas are in implementation and I will update this section very sooooon
         </p>
       </li>
     </Auxillary>
