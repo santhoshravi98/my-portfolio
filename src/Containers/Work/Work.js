@@ -1,12 +1,24 @@
 import react, { Component } from 'react'
 import './Work.css'
+import internImage from '../../Assets/Images/intern.jpg'
+import workImage from '../../Assets/Images/work.png'
+import skillsImage from '../../Assets/Images/skills.jpg'
+
 const ORANGE = 'ORANGE',
     BLUE = 'BLUE',
     GREEN = 'GREEN',
     GRAY = 'GRAY'
 
-const getCoinIcon = symbol => {
-    return `https://s3-us-west-2.amazonaws.com/s.cdpn.io/1468070/${symbol.toLowerCase()}.svg`
+const getInternIcon = () => {
+    return internImage;
+}
+
+const getWorkIcon = () => {
+    return workImage;
+}
+
+const getSkillsIcon = () => {
+    return skillsImage;
 }
 
 const getCoinColor = symbol => {
@@ -37,41 +49,37 @@ const getCoinColor = symbol => {
 const data = [
     {
         id: 1,
-        name: "Bitcoin",
-        symbol: "BTC",
-        rank: 1,
-        price: "9,159.68",
-        change24hr: "1.3",
-        cap: "168,679,164,784",
-        volume: "18,357,859,654",
+        name: "Xome",
+        symbol: "Yes",
+        work: "Real Time Auctions Engine",
+        cap: "HTML, CSS, HANDLEBAR JS, C#, SQL, JENKINS, OCTOPUS, GIT",
+        volume: "Jan-2019 to July-2019",
         circulating: "18,415,393",
-        img: getCoinIcon("BTC"),
+        img: getInternIcon(),
         color: getCoinColor("BTC")
     },
     {
         id: 2,
         name: "Ethereum",
-        symbol: "ETH",
+        symbol: "You",
         rank: 2,
-        price: "230.47",
-        change24hr: "1.44",
+        work: "230.47",
         cap: "25,699,790,870",
         volume: "7,122,827,657",
         circulating: "111,511,971",
-        img: getCoinIcon("ETH"),
+        img: getWorkIcon(),
         color: getCoinColor("ETH")
     },
     {
         id: 3,
         name: "Tether",
-        symbol: "USDT",
+        symbol: "Can",
         rank: 3,
-        price: "1.00",
-        change24hr: "0.35",
+        work: "",
         cap: "9,224,337,233",
         volume: "22,616,885,934",
         circulating: "9,187,991,663",
-        img: getCoinIcon("USDT"),
+        img: getSkillsIcon(),
         color: getCoinColor("USDT")
     }
 ]
@@ -117,8 +125,7 @@ class Work extends Component {
             name: coin.name,
             symbol: coin.symbol,
             rank: coin.rank,
-            price: formatNum(coin.price_usd),
-            change24hr: coin.percent_change_24h,
+            work: coin.work,
             cap: formatNum(coin.market_cap_usd),
             volume: formatNum(coin['24h_volume_usd']),
             circulating: formatNum(coin.available_supply),
@@ -160,7 +167,7 @@ class Work extends Component {
                 <div id="particles" />
                 <div id="help-tooltip" className={isShowingTooltip ? 'showing' : 'hide'}>
                     <i className="fa fa-question-circle-o" />
-                    <h1><span className="text">Hover over the coin icon and scroll.</span><span className="triangle" /></h1>
+                    <h1><span className="text">Hover over the icon and scroll.</span><span className="triangle" /></h1>
                 </div>
                 {card}
             </div>
@@ -201,7 +208,7 @@ class Card extends Component {
                                 </div>
                                 <div id="coin-rank">
                                     <div className="label">
-                                        <h1>Rank</h1>
+                                        <h1>Full Stack Intern</h1>
                                     </div>
                                     <div className="value">
                                         <h1>{coin.rank}</h1>
@@ -210,14 +217,11 @@ class Card extends Component {
                             </div>
                             <div id="coin-price">
                                 <div className="value">
-                                    <h1>${coin.price}</h1>
-                                </div>
-                                <div id="coin-change-24hr" className={this.determineSign(coin.change24hr)}>
-                                    <h1>{coin.change24hr}%</h1>
+                                    <h1>{coin.work}</h1>
                                 </div>
                             </div>
                             <div id="coin-info">
-                                <CoinInfoField value={`$${coin.cap}`} label={"Market Cap"} />
+                                <CoinInfoField value={coin.cap} label={"- Worked With"} />
                                 <CoinInfoField value={`$${coin.volume}`} label={"Volume"} />
                                 <CoinInfoField value={`${coin.circulating} ${coin.symbol}`} label={"Circulating Supply"} />
                             </div>

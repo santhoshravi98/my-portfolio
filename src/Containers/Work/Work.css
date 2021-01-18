@@ -352,7 +352,7 @@ body, html, #root, #app {
     vertical-align: top;
 }
 #app #card-wrapper #card #card-right #card-right-contents #coin-price .value h1 {
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 100;
 }
 #app #card-wrapper #card #card-right #card-right-contents #coin-price #coin-change-24hr {
@@ -379,14 +379,14 @@ body, html, #root, #app {
     margin-top: 20px;
 }
 #app #card-wrapper #card #card-right #card-right-contents #coin-info .coin-info-field .value h1 {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 300;
 }
 #app #card-wrapper #card #card-right #card-right-contents #coin-info .coin-info-field .label {
     margin-top: 4px;
 }
 #app #card-wrapper #card #card-right #card-right-contents #coin-info .coin-info-field .label h1 {
-    color: #c8c8c8;
+    color: #f5290e;
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
