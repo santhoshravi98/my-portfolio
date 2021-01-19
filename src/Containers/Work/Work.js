@@ -49,38 +49,39 @@ const getCoinColor = symbol => {
 const data = [
     {
         id: 1,
-        name: "Xome",
+        name: "Intern in Xome",
         symbol: "Yes",
         work: "Real Time Auctions Engine",
         cap: "HTML, CSS, HANDLEBAR JS, C#, SQL, JENKINS, OCTOPUS, GIT",
-        volume: "Jan-2019 to July-2019",
-        circulating: "18,415,393",
+        Duration: "Jan-2019 to July-2019",
+        circulating: "Had an Hands on Exp. with different domains thereby exposed myself to different Stacks. Liked working with both UI and Server Side.",
         img: getInternIcon(),
-        color: getCoinColor("BTC")
+        color: getCoinColor("BTC"),
+        label: ""
     },
     {
         id: 2,
-        name: "Ethereum",
+        name: "SDE1 in Xome",
         symbol: "You",
-        rank: 2,
-        work: "230.47",
-        cap: "25,699,790,870",
-        volume: "7,122,827,657",
-        circulating: "111,511,971",
+        work: "Real Time Auctions Engine",
+        cap: "Tools used in Intern  + GTM, Google Analytics, React, Chart JS",
+        Duration: "July 2019 - Present",
+        circulating: "Gained Multi layer Experience in each Domain which I worked with. Got oppurtunity to work with different SQL Jobs, C# Layered Architecture, Google Analytics Data Insights, Chart JS Visualisations",
         img: getWorkIcon(),
-        color: getCoinColor("ETH")
+        color: getCoinColor("ETH"),
+        label: ""
     },
     {
         id: 3,
-        name: "Tether",
+        name: "Skills & Interests",
         symbol: "Can",
-        rank: 3,
         work: "",
-        cap: "9,224,337,233",
-        volume: "22,616,885,934",
+        cap: "I have interest in problem solving and data structures. Link-List is one which I always like. Love working with Front-End Apps and that helped to study some namely React. Data Manipulations using queries like SQL always interests me.",
+        Duration: "22,616,885,934",
         circulating: "9,187,991,663",
         img: getSkillsIcon(),
-        color: getCoinColor("USDT")
+        color: getCoinColor("USDT"),
+        label: "- Worked With"
     }
 ]
 
@@ -99,7 +100,7 @@ class Work extends Component {
     }
     componentDidMount() {
         this.getCoins()
-        particlesJS("particles", particlesConfig)
+         particlesJS("particles", particlesConfig)
     }
     componentDidUpdate(prevProps, prevState) {
         if (prevState.index !== this.state.index) {
@@ -127,10 +128,11 @@ class Work extends Component {
             rank: coin.rank,
             work: coin.work,
             cap: formatNum(coin.market_cap_usd),
-            volume: formatNum(coin['24h_volume_usd']),
-            circulating: formatNum(coin.available_supply),
+            volume: coin.Duration,
+            circulating: coin.circulating,
             img: this.getCoinIcon(coin.symbol.toLowerCase()),
-            color: getCoinColor(coin.symbol)
+            color: getCoinColor(coin.symbol),
+            label: coin.label
         }))
     }
     setIndex(index) {
@@ -208,7 +210,7 @@ class Card extends Component {
                                 </div>
                                 <div id="coin-rank">
                                     <div className="label">
-                                        <h1>Full Stack Intern</h1>
+                                        <h1></h1>
                                     </div>
                                     <div className="value">
                                         <h1>{coin.rank}</h1>
@@ -221,9 +223,9 @@ class Card extends Component {
                                 </div>
                             </div>
                             <div id="coin-info">
-                                <CoinInfoField value={coin.cap} label={"- Worked With"} />
-                                <CoinInfoField value={`$${coin.volume}`} label={"Volume"} />
-                                <CoinInfoField value={`${coin.circulating} ${coin.symbol}`} label={"Circulating Supply"} />
+                                <CoinInfoField value={coin.cap} label ={coin.label} label={""} />
+                                <CoinInfoField value={coin.Duration} label ={coin.label} label={"- Duration"} />
+                                <CoinInfoField value={coin.circulating} />
                             </div>
                             <div id="card-right-stripes" />
                         </div>
