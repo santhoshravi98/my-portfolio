@@ -57,7 +57,8 @@ const data = [
         circulating: "Had an Hands on Exp. with different domains thereby exposed myself to different Stacks. Liked working with both UI and Server Side.",
         img: getInternIcon(),
         color: getCoinColor("BTC"),
-        label: ""
+        label1: "-Worked",
+        label2: "-Duration"
     },
     {
         id: 2,
@@ -69,7 +70,8 @@ const data = [
         circulating: "Gained Multi layer Experience in each Domain which I worked with. Got oppurtunity to work with different SQL Jobs, C# Layered Architecture, Google Analytics Data Insights, Chart JS Visualisations",
         img: getWorkIcon(),
         color: getCoinColor("ETH"),
-        label: ""
+        label1: "-Worked",
+        label2: "-Duration"
     },
     {
         id: 3,
@@ -77,11 +79,12 @@ const data = [
         symbol: "Can",
         work: "",
         cap: "I have interest in problem solving and data structures. Link-List is one which I always like. Love working with Front-End Apps and that helped to study some namely React. Data Manipulations using queries like SQL always interests me.",
-        Duration: "22,616,885,934",
+        Duration: "Learning from different people is one which I always Beleive in. Interating with different people will always provide different thoughts for a same problem.",
         circulating: "9,187,991,663",
         img: getSkillsIcon(),
         color: getCoinColor("USDT"),
-        label: "- Worked With"
+        label1: "",
+        label2: ""
     }
 ]
 
@@ -100,7 +103,7 @@ class Work extends Component {
     }
     componentDidMount() {
         this.getCoins()
-         particlesJS("particles", particlesConfig)
+        particlesJS("particles", particlesConfig)
     }
     componentDidUpdate(prevProps, prevState) {
         if (prevState.index !== this.state.index) {
@@ -223,8 +226,8 @@ class Card extends Component {
                                 </div>
                             </div>
                             <div id="coin-info">
-                                <CoinInfoField value={coin.cap} label ={coin.label} label={""} />
-                                <CoinInfoField value={coin.Duration} label ={coin.label} label={"- Duration"} />
+                                <CoinInfoField label={coin.label1} value={coin.cap}  />
+                                <CoinInfoField value={coin.Duration} label={coin.label2} />
                                 <CoinInfoField value={coin.circulating} />
                             </div>
                             <div id="card-right-stripes" />

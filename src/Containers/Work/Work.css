@@ -354,6 +354,7 @@ body, html, #root, #app {
 #app #card-wrapper #card #card-right #card-right-contents #coin-price .value h1 {
     font-size: 20px;
     font-weight: 100;
+    font-family: cursive;
 }
 #app #card-wrapper #card #card-right #card-right-contents #coin-price #coin-change-24hr {
     display: inline-block;
@@ -390,6 +391,8 @@ body, html, #root, #app {
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
+    margin-top: 0px;
+    font-family: cursive;
 }
 #app #card-wrapper #card #card-right #card-right-contents #card-right-stripes {
     bottom: 0px;
