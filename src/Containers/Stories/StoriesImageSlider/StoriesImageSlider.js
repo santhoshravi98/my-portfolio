@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import './StoriesImageSlider.css';
+import cover1 from '../../../Assets/Images/cover1.jpg'
+import cover2 from '../../../Assets/Images/cover2.jpg'
+import cover3 from '../../../Assets/Images/cover3.jpg'
+import cover4 from '../../../Assets/Images/cover4.jpeg'
+import cover5 from '../../../Assets/Images/cover5.jpeg'
 
 class StoriesImageSlider extends Component {
     constructor(props) {
@@ -14,28 +19,30 @@ class StoriesImageSlider extends Component {
         this.state = {
             activeSlide: -1, prevSlide: -1, sliderReady: false, slides: [
                 {
-                    city: 'Paris',
-                    country: 'France',
-                    img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/paris.jpg',
+                    city: 'Himalayas ',
+                    country: 'Kedarkantha Trails',
+                    img: cover1,
+                    description:"This Journery is our Life Time Experience"
                 },
                 {
-                    city: 'Singapore',
-                    img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/singapore.jpg',
+                    city: 'paradise',
+                    country: "kedarkantha snow",
+                    img: cover2,
                 },
                 {
-                    city: 'Prague',
-                    country: 'Czech Republic',
-                    img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/prague.jpg',
+                    city: 'Kothgoan',
+                    country: 'Base Camp',
+                    img: cover3,
                 },
                 {
-                    city: 'Amsterdam',
-                    country: 'Netherlands',
-                    img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/amsterdam.jpg',
+                    city: 'Squad',
+                    country: 'The',
+                    img: cover4,
                 },
                 {
-                    city: 'Moscow',
-                    country: 'Russia',
-                    img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/moscow.jpg',
+                    city: 'Batch',
+                    country: 'The',
+                    img: cover5,
                 },
             ]
         };
@@ -73,7 +80,7 @@ class StoriesImageSlider extends Component {
         const { activeSlide, prevSlide, sliderReady } = this.state;
         return (
             <div className={classNames('slider', { 's--ready': sliderReady })}>
-                <p className="slider__top-heading">Travelers</p>
+                <p className="slider__top-heading">Travel Dairies</p>
                 <div className="slider__slides">
                     {this.state.slides.map((slide, index) => (
                         <div
@@ -85,7 +92,7 @@ class StoriesImageSlider extends Component {
                                 <h2 className="slider__slide-heading">
                                     {slide.city.split('').map(l => <span>{l}</span>)}
                                 </h2>
-                                <p className="slider__slide-readmore">read more</p>
+                                <p className="slider__slide-readmore">{slide.description}</p>
                             </div>
                             <div className="slider__slide-parts">
                                 {[...Array(this.IMAGE_PARTS).fill()].map((x, i) => (

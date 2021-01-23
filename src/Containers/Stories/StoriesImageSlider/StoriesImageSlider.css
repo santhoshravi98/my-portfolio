@@ -134,7 +134,7 @@ body {
 .slider__slide-readmore {
   position: relative;
   font-size: 14px;
-  text-transform: lowercase;
+  text-transform: uppercase;
   backface-visibility: hidden;
   transform: translateY(-20px);
   cursor: pointer;
@@ -145,21 +145,6 @@ body {
   transition-delay: 0.65s;
   opacity: 1;
   transform: translateY(0);
-}
-.slider__slide-readmore:before {
-  content: '';
-  position: absolute;
-  left: -2px;
-  top: -3px;
-  width: calc(100% + 4px);
-  height: calc(100% + 6px);
-  background: rgba(255, 255, 255, 0.4);
-  transform: scaleX(0.3);
-  transform-origin: 0 50%;
-  transition: transform 0.3s;
-}
-.slider__slide-readmore:hover:before {
-  transform: scaleX(1);
 }
 .slider__slide-parts {
   position: absolute;
