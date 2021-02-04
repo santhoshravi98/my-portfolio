@@ -80,7 +80,7 @@ const data = [
         work: "",
         cap: "I have interest in problem solving and data structures. Link-List is one which I always like. Love working with Front-End Apps and that helped to study some namely React. Data Manipulations using queries like SQL always interests me.",
         Duration: "Learning from different people is one which I always Beleive in. Interating with different people will always provide different thoughts for a same problem.",
-        circulating: "9,187,991,663",
+        circulating: "Passionate in development",
         img: getSkillsIcon(),
         color: getCoinColor("USDT"),
         label1: "",
@@ -102,8 +102,10 @@ class Work extends Component {
         }
     }
     componentDidMount() {
-        this.getCoins()
-        particlesJS("particles", particlesConfig)
+        this.getCoins();
+        particlesJS("particles", particlesConfig);
+        var Footer = document.getElementById("Master_Footer");
+        Footer.style.display = "none";
     }
     componentDidUpdate(prevProps, prevState) {
         if (prevState.index !== this.state.index) {
@@ -226,7 +228,7 @@ class Card extends Component {
                                 </div>
                             </div>
                             <div id="coin-info">
-                                <CoinInfoField label={coin.label1} value={coin.cap}  />
+                                <CoinInfoField label={coin.label1} value={coin.cap} />
                                 <CoinInfoField value={coin.Duration} label={coin.label2} />
                                 <CoinInfoField value={coin.circulating} />
                             </div>

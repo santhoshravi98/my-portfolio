@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import classNames from 'classnames';
 import StoriesImageSlider from '../Stories/StoriesImageSlider/StoriesImageSlider'
 import StoriesImageHexagon from '../../Components/StoriesImageHexagon/StoriesImageHexagon'
 import Auxillary from '../../HOC/Auxillary/Auxillary'
 class StoriesHomePage extends Component {
+    componentDidMount() {
+        var Footer = document.getElementById("Master_Footer");
+        Footer.style.display = "block";
+    }
     render() {
         return (
             <Auxillary>
-                <StoriesImageSlider/>
-                <StoriesImageHexagon/>
+                <StoriesImageSlider />
+                <StoriesImageHexagon />
             </Auxillary>
         )
     }

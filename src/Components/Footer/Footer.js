@@ -12,14 +12,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = (props) => {
   return (
     <Auxillary>
-      <footer class={css.sitefooter}>
+      <footer class={css.sitefooter} id="Master_Footer">
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <h6>About this Site</h6>
               <p class="text-justify">
-               This site is assembled from different web sources. Tools used include React, Redux, CSS. Have used several plugins to support several features in React. These include CSS Modules, React-Bootstrap, Css-module-class-lister, fortawesome/free-brands-svg-icons,..etc
-               Firebase is used as a source of Data Storage. I am happy to share the list of all site references that I used. (Click here). Ping me if you have any questions or Feedback. 
+                This site is assembled from different web sources. Tools used include React, Redux, CSS. Have used several plugins to support several features in React. These include CSS Modules, React-Bootstrap, Css-module-class-lister, fortawesome/free-brands-svg-icons,..etc
+                Firebase is used as a source of Data Storage. I am happy to share the list of all site references that I used. (Click here). Ping me if you have any questions or Feedback.
               </p>
             </div>
 
@@ -36,7 +36,7 @@ const Footer = (props) => {
                   Automated Mail Response
                 </li>
                 <li>
-                 Analytics Charts
+                  Analytics Charts
                 </li>
                 <li>
                   Interactive Responsive Design
@@ -76,7 +76,7 @@ const Footer = (props) => {
             <div class="col-md-8 col-sm-6 col-xs-12">
               <p class={css.copyrighttext}>
                 Copyright &copy; 2021 No Rights Reserved.
-                <a href="#">Thanks</a>.
+                <a href="/#">Thanks</a>.
               </p>
             </div>
 
@@ -89,12 +89,12 @@ const Footer = (props) => {
                   </a>
                 </li>
                 <li>
-                  <a className="twitter" href="#" rel="noopener noreferrer" target="_blank">
+                  <a className="twitter" href="/#" rel="noopener noreferrer" target="_blank">
                     <FontAwesomeIcon icon={faTwitter} />
                   </a>
                 </li>
                 <li>
-                  <a className="dribbble" href="https://www.instagram.com/invites/contact/?i=1xan13ua2xdjb&utm_content=yy6lc5" rel="noopener noreferrer"  target="_blank">
+                  <a className="dribbble" href="https://www.instagram.com/invites/contact/?i=1xan13ua2xdjb&utm_content=yy6lc5" rel="noopener noreferrer" target="_blank">
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                 </li>

@@ -20,6 +20,10 @@ const customStyles = {
 };
 Modal.setAppElement('#root');
 class Feedback extends Component {
+    componentDidMount() {
+        var Footer = document.getElementById("Master_Footer");
+        Footer.style.display = "block";
+    }
     state = {
         FeedbackForm: {
             name: {
