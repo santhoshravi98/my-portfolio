@@ -39,7 +39,7 @@ const StoriesImageHexagon = (props) => {
                     <div>
                         <img src={hex4} alt="Game Of Thrones Image" />
                         <h1 >With WhiteWalkers</h1>
-                        <p >This place was so intense and reminded of the White Walkers from Game Of Thrones.</p>
+                        <p >This place was so intense, reminded the White Walkers from Game Of Thrones.</p>
                     </div>
                 </li>
                 <li className={css.pusher}></li>

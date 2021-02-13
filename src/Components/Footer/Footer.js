@@ -12,18 +12,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = (props) => {
   return (
     <Auxillary>
-      <footer class={css.sitefooter} id="Master_Footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
+      <footer className={css.sitefooter} id="Master_Footer">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-6">
               <h6>About this Site</h6>
-              <p class="text-justify">
+              <p className="text-justify">
                 This site is assembled from different web sources. Tools used include React, Redux, CSS. Have used several plugins to support several features in React. These include CSS Modules, React-Bootstrap, Css-module-class-lister, fortawesome/free-brands-svg-icons,..etc
                 Firebase is used as a source of Data Storage. I am happy to share the list of all site references that I used. (Click here). Ping me if you have any questions or Feedback.
               </p>
             </div>
 
-            <div class="col-xs-6 col-md-3">
+            <div className="col-xs-6 col-md-3">
               <h6>Future Plans</h6>
               <ul className={css.footerlinks}>
                 <li>
@@ -44,7 +44,7 @@ const Footer = (props) => {
               </ul>
             </div>
 
-            <div class="col-xs-6 col-md-3">
+            <div className="col-xs-6 col-md-3">
               <h6>Quick Links</h6>
               <ul className={css.footerlinks}>
                 <li>
@@ -71,16 +71,16 @@ const Footer = (props) => {
           </div>
           <hr />
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class={css.copyrighttext}>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-sm-6 col-xs-12">
+              <p className={css.copyrighttext}>
                 Copyright &copy; 2021 No Rights Reserved.
                 <a href="/#">Thanks</a>.
               </p>
             </div>
 
-            <div class="col-md-4 col-sm-6 col-xs-12">
+            <div className="col-md-4 col-sm-6 col-xs-12">
               <ul className={css.socialicons}>
                 <li>
                   <a className="facebook" href="https://www.facebook.com/rsanthosh411998/" rel="noopener noreferrer" target="_blank">

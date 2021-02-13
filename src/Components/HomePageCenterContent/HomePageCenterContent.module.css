@@ -119,12 +119,12 @@
     transform: translateY(11rem);
     z-index: 1;
     border-radius: 50px;
-    background-image:url(../../Assets//Images/photo_2020-12-30_13-31-39.jpg)
+    background-image:url(../../Assets//Images/photo_2020-12-30_13-31-39.jpg);
+    margin-top: 40px;
   }
   @media (min-width: 40.625em) {
     .csectiontitle:after {
       margin-left: auto;
-      margin-right: 115px;
       transform: translateY(2rem);
     }
   }
@@ -165,12 +165,12 @@
   }
   @media (min-width: 48em) {
     .csection span:after {
-      width: 57ch;
+      width: 56ch;
     }
   }
   @media (min-width: 62em) {
     .csection span:after {
-      width: 67ch;
+      width: 57ch;
     }
   }
   .cservices {

@@ -19,9 +19,9 @@ class HomePageBanner extends Component {
         <div className={css.desktoponly}>
           <HomePageTimeLineDesktop />
         </div>
-        <div className={css.mobileonly}>
+        {/* <div className={css.mobileonly}>
           <HomePageTimeLineMobile />
-        </div>
+        </div> */}
       </Auxillary>
     );
   }

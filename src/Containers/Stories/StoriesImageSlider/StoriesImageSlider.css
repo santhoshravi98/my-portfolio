@@ -17,7 +17,6 @@ body {
   z-index: 12;
   position: absolute;
   left: 0;
-  top: 100px;
   width: 100%;
   text-align: center;
   font-size: 16px;
@@ -311,4 +310,12 @@ body {
 .icon-link--twitter {
   left: auto;
   right: 5px;
+}
+@media only screen and (max-width: 768px) {
+  .slider__slide-heading {
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
 }

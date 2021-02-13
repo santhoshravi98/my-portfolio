@@ -126,12 +126,12 @@
   }
   @media (min-width: 48em) {
     .csection span:after {
-      width: 57ch;
+      width: 56ch;
     }
   }
   @media (min-width: 62em) {
     .csection span:after {
-      width: 67ch;
+      width: 57ch;
     }
   }
   .cservices {
