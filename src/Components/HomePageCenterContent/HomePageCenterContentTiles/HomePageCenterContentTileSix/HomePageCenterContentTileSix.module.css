@@ -255,6 +255,7 @@
     font-size: var(--s1);
     letter-spacing: -0.04em;
     line-height: 1.2;
+    font-family: Brush Script MT, Brush Script Std, cursive;
   }
   .cservicesitem:after {
     content: '';
@@ -275,7 +276,7 @@
   }
   .cservicesitem p {
     margin-top: var(--s-1);
-    font-weight: 400;
+    font-weight: 600;
     color: hsla(var(--color-brand-primary-h), var(--color-brand-primary-s), var(--color-brand-primary-l), 0.65);
   }
   .cservicesitem:hover {

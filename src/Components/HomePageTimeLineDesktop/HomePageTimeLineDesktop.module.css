@@ -70,7 +70,7 @@ body {
     opacity: 0;
 }
 .tlcontent h1 {
-    font-family: 'Pathway Gothic One', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Comic Sans MS;
     text-transform: uppercase;
     color: #1779cf;
     font-size: 1.44rem;
@@ -86,7 +86,7 @@ body {
     border-bottom: 1px solid rgba(9, 255, 21, 0.788);
 }
 .tlyear p {
-    font-family: 'Pathway Gothic One', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Comic Sans MS;
     font-size: 1.728rem;
 }
 .tlbg {

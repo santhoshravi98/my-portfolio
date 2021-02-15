@@ -304,9 +304,16 @@
   }
 }
 
-@media (max-width:767px){
+@media (max-width:650px){
     .demo {
         position: absolute;
-        left: 34%; 
+        left: 30%; 
+    }
+}
+@media (min-width: 651px) and (max-width: 700px) { 
+
+  .demo {
+    position: absolute;
+    left: 15%; 
 }
 }

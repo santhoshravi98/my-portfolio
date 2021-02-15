@@ -29,6 +29,7 @@ body {
 .slider.s--ready .slider__top-heading {
   transform: translateY(0);
   opacity: 1;
+  font-family: Ink Free;
 }
 .slider__slides {
   position: relative;
@@ -68,6 +69,7 @@ body {
   transition-delay: 0.65s;
   opacity: 1;
   transform: translateY(0);
+  font-family: Lucida Handwriting;
 }
 .slider__slide-heading {
   display: flex;

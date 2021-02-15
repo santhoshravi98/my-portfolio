@@ -294,6 +294,7 @@
     font-size: var(--s1);
     letter-spacing: -0.04em;
     line-height: 1.2;
+    font-family: Brush Script MT, Brush Script Std, cursive;
   }
   .cservicesitem:after {
     content: '';
@@ -306,7 +307,7 @@
     border-radius: 25px 0;
     cursor: pointer;
     transition: inherit;
-    background-color: var(--color-brand-accent);
+    background-color: #009fff;
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position: center;

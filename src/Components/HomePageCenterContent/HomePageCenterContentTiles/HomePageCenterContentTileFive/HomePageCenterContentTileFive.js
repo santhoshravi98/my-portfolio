@@ -7,7 +7,8 @@ const HomePageCenterContentFour = (props) => {
       <li className={css.cservicesitem}>
         <h3>Hobbies</h3>
         <p>
-          OK. Technical stuff is enough. Coming to Hobbies, I watch Movies(Tamil, English, Malayalam) and Series(English), Playing Cricket with friends always pulls me in. Playing Table Tennis has also been my recent addiction. Following Tech Reviews and Vlogs has become my recent Hobbies. 
+          OK. Technical stuff is enough. Coming to Hobbies, I watch Movies(Tamil, English, Malayalam) and Series(English), Playing Cricket with friends always pulls me in. Playing Table Tennis has also been my recent addiction. 
+          Following Tech Reviews and Vlogs has also become my recent Hobbies.  Also I watch random tech videos from youtube since I always get them from recommendations.
         </p>
       </li>
     </Auxillary>
