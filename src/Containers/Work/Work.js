@@ -172,7 +172,7 @@ class Work extends Component {
         return (
             <div id="app" className={updating ? 'updating' : ''}>
                 <div id="particles" />
-                <div id="help-tooltip" className={isShowingTooltip ? 'showing' : 'hide'}>
+                <div id="help-tooltip">
                     <i className="fa fa-question-circle-o" />
                     <h1><span className="text">Hover over the icon and scroll.</span><span className="triangle" /></h1>
                 </div>

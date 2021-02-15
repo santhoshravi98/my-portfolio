@@ -15,7 +15,7 @@ const Message = (props) => {
                     <div className={classes(css.mouth, css.happy)}></div>
                 </div>
                 <div className={classes(css.shadow, css.scale)}></div>
-                <div className={css.message}><h1 className={css.alert}>Success!</h1><p className={css.para}>yay, Your Feedback is Submitted Successfully.</p></div>
+                <div className={css.message}><h1 className={css.alert}>Success!</h1><p className={css.para}>yay THANKS! Your Feedback is Submitted Successfully.</p></div>
                 <button className={css.buttonbox}><h1 className={css.green} onClick={props.refToCloseModal}>Close</h1></button>
             </div>
         )

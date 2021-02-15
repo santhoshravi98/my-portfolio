@@ -1,21 +1,23 @@
-import React, { useState, Component } from 'react'
+import React, { Component } from 'react'
 import css from '../Feedback/Feedback.module.css'
-import Quote from '../../Components/Quote/Quote'
 import * as FeedbackActionCreator from '../../Store/Actions/FeedbackActionCreator'
 import Auxillary from '../../HOC/Auxillary/Auxillary'
 import LoadingModal from '../../Components/UI/Spinner/Spinner'
 import { connect } from 'react-redux'
 import Message from '../../Components/Message/Message'
-import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 const customStyles = {
+    overlay: {
+        backdropFilter: 'blur(10px)'
+    },
     content: {
         top: '50%',
         left: '50%',
         right: 'auto',
         bottom: 'auto',
         marginRight: '-50%',
-        transform: 'translate(-50%, -50%)'
+        transform: 'translate(-50%, -50%)',
+        backdropFilter: 'blur(8px)'
     }
 };
 Modal.setAppElement('#root');
@@ -29,21 +31,24 @@ class Feedback extends Component {
             name: {
                 elementConfig: {
                     type: "text",
-                    placeholder: "Enter Name"
+                    placeholder: "Enter Name",
+                    height: "50px"
                 },
                 value: ""
             },
             email: {
                 elementConfig: {
                     type: "email",
-                    placeholder: "Enter Email"
+                    placeholder: "Enter Email",
+                    height: "50px"
                 },
                 value: ""
             },
             comments: {
                 elementConfig: {
                     type: "text",
-                    placeholder: "I am still learning...........Please provide your feedback"
+                    placeholder: "Comment",
+                    height: "80px"
                 },
                 value: ""
             }
@@ -102,22 +107,53 @@ class Feedback extends Component {
         else {
             dynamicDiv = (
                 <div id="#main">
-                    <div className={css.loginpage}>
-                        <div className={css.form}>
-                            <form className="login-form" onSubmit={this.formSubmitHandler}>
-                                {elementsArray.map((iterator) => {
-                                    return (
-                                        <input key={iterator.id}
-                                            className={iterator.id}
-                                            type={iterator.configuration.elementConfig.type}
-                                            placeholder={iterator.configuration.elementConfig.placeholder}
-                                            onChange={(event) => { this.onChangeHandler(event, iterator.id) }}
-                                            value={iterator.value}
-                                            required />
-                                    )
-                                })}
-                                <button>Submit</button>
-                            </form>
+                    <div className={css.bg}>
+                        <div className={css.businesscard} ontouchstart="this.classList.toggle('hover');">
+                            <div className={css.flipper}>
+                                <div className={css.front}>
+                                    <div className={css.name}>
+                                        <span className={css.first}>FEEDBACK</span>
+                                        <span className={css.last}></span>
+                                        <span className={css.title}>Please....</span>
+                                    </div>
+                                </div>
+                                <div className={css.back}>
+                                    <div className={css.containersm}>
+                                        <figure className={css.logowhite}></figure>
+                                    </div>
+                                    <div className={css.containerlg}>
+                                        <div className={css.social}>
+                                            <p>
+                                                “I think it’s very important to have a feedback loop,
+                                                where you’re constantly thinking about what you’ve done
+                                                and how you could be doing it better.”
+                                            <p>
+                                                    - ELON MUSK
+                                            </p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={css.loginpage}>
+                            <div className={css.form}>
+                                <form className="login-form" onSubmit={this.formSubmitHandler}>
+                                    {elementsArray.map((iterator) => {
+                                        return (
+                                            <input key={iterator.id}
+                                                class={iterator.id}
+                                                type={iterator.configuration.elementConfig.type}
+                                                placeholder={iterator.configuration.elementConfig.placeholder}
+                                                onChange={(event) => { this.onChangeHandler(event, iterator.id) }}
+                                                value={iterator.value}
+                                                style={{ height: iterator.configuration.elementConfig.height }}
+                                                required />
+                                        )
+                                    })}
+                                    <button>Submit</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

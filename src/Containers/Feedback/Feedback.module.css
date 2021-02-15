@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-#comments {
+
+.comments {
   font-size: 18pt;
   height: 42px;
   width : 300px;
@@ -30,6 +31,7 @@
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
+  font-family: cursive;
 }
 .form button {
   font-family: "Roboto", sans-serif;
@@ -46,7 +48,7 @@
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: #43A047;
+  background: #7a78da;
 }
 .form .message {
   margin: 15px 0 0;
@@ -93,13 +95,153 @@
 .container .info span .fa {
   color: #EF3B3A;
 }
-body {
-  background: #76b852; /* fallback for old browsers */
-  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-  background: -moz-linear-gradient(right, #76b852, #8DC26F);
-  background: -o-linear-gradient(right, #76b852, #8DC26F);
-  background: linear-gradient(to left, #76b852, #8DC26F);
+.bg {
+  background-image:url(../../Assets//Images/feedback.png);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+div.businesscard {
+  height: 427px;
+  width: 320px;
+  margin-left: -160px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  perspective: 1000;
+  padding-top: 40px;
+}
+div.businesscard:hover .flipper, div.businesscard.hover .flipper {
+  transform: rotateY(180deg) rotateZ(90deg);
+}
+div.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform-origin: center 160px;
+}
+div.front, div.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 427px;
+  width: 320px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.75);
+}
+div.front {
+  background-color: white;
+  z-index: 0;
+}
+div.front:before, div.front:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 160px;
+  border-style: solid;
+  border-color: transparent;
+}
+div.front:before {
+  border-top-color: #288fbd;
+  border-left-color: #288fbd;
+  z-index: 2;
+}
+div.front:after {
+  border-top-color: #005d8c;
+  border-right-color: #005d8c;
+}
+div.front div.name {
+  position: absolute;
+  bottom: 60px;
+  left: 85px;
+}
+div.front div.name span {
+  display: block;
+  font-size: 40px;
+  line-height: 45px;
+}
+div.front div.name span.first {
+  color: #005d8c;
+  font-family: fantasy;
+}
+div.front div.name span.last {
+  color: #288fbd;
+}
+div.front div.name span.title {
+  font-size: 20px;
+  line-height: 20px;
+}
+div.back {
+  background-color: #005d8c;
+  color: white;
+  width: 427px;
+  height: 320px;
+  box-sizing: border-box;
+  transform: rotateY(180deg) rotateZ(90deg);
+}
+div.back div.containersm {
+  float: left;
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+div.back div.containerlg {
+  width: 100%;
+}
+div.back div.social {
+  margin-top: 70px;
+  font-family:cursive;
+}
+div.back figure.logowhite {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  display: block;
+  margin: -60px -60px;
+}
+div.back figure.logowhite:before, div.back figure.logowhite:after {
+  display: block;
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+}
+div.back figure.logowhite:before {
+  top: 0;
+  left: 0;
+  border-width: 60px;
+  border-top-color: white;
+  border-left-color: white;
+  z-index: 2;
+}
+div.back figure.logowhite:after {
+  bottom: 0;
+  right: 0;
+  border-width: 56px;
+  border-right-color: white;
+}
+div.back a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+div.back a:hover {
+  text-decoration: underline;
+}
+div.back ul.social {
+  font-size: 1.25rem;
+}
+div.back ul.social li {
+  margin-top: 1rem;
+}
+div.back ul.social li:first-child {
+  margin-top: 2rem;
 }

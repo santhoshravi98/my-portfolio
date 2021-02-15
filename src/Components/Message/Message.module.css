@@ -39,17 +39,19 @@
  .alert {
 	 font-weight: 700;
 	 letter-spacing: 5px;
-	 font-size: 0.9em;
+	 font-size: 1.9em;
 	 font-weight: 100;
 	 letter-spacing: 3px;
 	 padding-top: 5px;
 	 color: #1f0101;
 	 padding-bottom: 5px;
 	 text-transform: uppercase;
+	 font-family: fantasy;
+	 font-style: italic;
 }
  .para {
 	 margin-top: -5px;
-	 font-size: 0.5em;
+	 font-size: 0.7em;
 	 font-weight: 100;
 	 color: #5e5e5e;
 	 letter-spacing: 1px;
@@ -94,7 +96,7 @@
 	 position: absolute;
 	 width: 22%;
 	 height: 22%;
-	 background: #fcfcfc;
+	 background: #34c410;
 	 border-radius: 50%;
 	 border: 1px solid #777;
 	 top: 21%;
