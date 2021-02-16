@@ -307,7 +307,7 @@
 @media (max-width:650px){
     .demo {
         position: absolute;
-        left: 30%; 
+        left: 35%; 
     }
 }
 @media (min-width: 651px) and (max-width: 700px) { 

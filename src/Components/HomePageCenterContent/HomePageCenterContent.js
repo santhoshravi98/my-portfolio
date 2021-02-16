@@ -1,7 +1,6 @@
 import React from "react";
 import Auxillary from "../../HOC/Auxillary/Auxillary";
 import css from "../HomePageCenterContent/HomePageCenterContent.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HomePageCenterContentTileOne from "../HomePageCenterContent/HomePageCenterContentTiles/HomePageCenterContentTileOne/HomePageCenterContentTileOne";
 import HomePageCenterContentTileTwo from "../HomePageCenterContent/HomePageCenterContentTiles/HomePageCenterContentTileTwo/HomePageCenterContentTileTwo";
 import HomePageCenterContentTileThree from "../HomePageCenterContent/HomePageCenterContentTiles/HomePageCenterContentTileThree/HomePageCenterContentTileThree";
