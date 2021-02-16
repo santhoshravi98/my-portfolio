@@ -1,4 +1,4 @@
-import react, { Component } from 'react'
+import { Component } from 'react'
 import Auxillary from '../../../HOC/Auxillary/Auxillary'
 import Work from '../Work'
 class WorkHomePage extends Component {
@@ -8,6 +8,6 @@ class WorkHomePage extends Component {
                 <Work />
             </Auxillary>
         )
-    }
+}
 }
 export default WorkHomePage;
