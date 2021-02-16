@@ -1,4 +1,4 @@
-import react, { Component } from 'react'
+import { Component } from 'react'
 import './Work.css'
 import internImage from '../../Assets/Images/intern.jpg'
 import workImage from '../../Assets/Images/work.png'
@@ -103,7 +103,7 @@ class Work extends Component {
     }
     componentDidMount() {
         this.getCoins();
-        particlesJS("particles", particlesConfig);
+        window.particlesJS("particles", particlesConfig);
         var Footer = document.getElementById("Master_Footer");
         Footer.style.display = "none";
     }
@@ -148,8 +148,7 @@ class Work extends Component {
             coins,
             index,
             updating,
-            isLoading,
-            isShowingTooltip
+            isLoading
         } = this.state
         let card = null
         if (isLoading) {
@@ -285,7 +284,7 @@ class CoinSelection extends Component {
     }
     render() {
         const coinOptions = this.props.coins.slice(0, 10).map(coin => {
-            const selected = this.props.index == coin.rank - 1
+            const selected = this.props.index === coin.rank - 1
             return (
                 <div key={coin.symbol} className={`coin-option ${selected ? 'selected' : ''}`}>
                     <div className={'coin-option-icon'} style={{ backgroundImage: `url(${coin.img})` }} />
@@ -297,7 +296,7 @@ class CoinSelection extends Component {
                 <div id="coin-options-wrapper"
                     ref="coinOptions"
                     className="scroll-bar"
-                    onScroll={_.throttle(this.onOptionsScroll, 200)}
+                    onScroll={window._.throttle(this.onOptionsScroll, 200)}
                 >
                     <div id="coin-options">
                         {coinOptions}
