@@ -5,7 +5,8 @@ import {
   faTwitter,
   faLinkedin,
   faInstagram,
-  faGithub
+  faGithub,
+  faWhatsapp
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -89,7 +90,7 @@ const Footer = (props) => {
                   </a>
                 </li>
                 <li>
-                  <a className="twitter" href="/#" rel="noopener noreferrer" target="_blank">
+                  <a className="twitter" href="https://twitter.com/SanthoshBozz" rel="noopener noreferrer" target="_blank">
                     <FontAwesomeIcon icon={faTwitter} />
                   </a>
                 </li>
@@ -106,6 +107,11 @@ const Footer = (props) => {
                 <li>
                   <a className="linkedin" href="https://github.com/santhoshravi98/" rel="noopener noreferrer" target="_blank">
                     <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:9442357408">
+                    <FontAwesomeIcon icon={faWhatsapp}/>
                   </a>
                 </li>
               </ul>

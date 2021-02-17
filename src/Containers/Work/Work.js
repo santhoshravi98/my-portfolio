@@ -3,6 +3,7 @@ import './Work.css'
 import internImage from '../../Assets/Images/intern.jpg'
 import workImage from '../../Assets/Images/work.png'
 import skillsImage from '../../Assets/Images/skills.jpg'
+import { isMobile } from 'react-device-detect';
 
 const ORANGE = 'ORANGE',
     BLUE = 'BLUE',
@@ -54,7 +55,7 @@ const data = [
         work: "Real Time Auctions Engine",
         cap: "HTML, CSS, HANDLEBAR JS, C#, SQL, JENKINS, OCTOPUS, GIT",
         Duration: "Jan-2019 to July-2019",
-        circulating: "Had an Hands on Exp. with different domains thereby exposed myself to different Stacks. Liked working with both UI and Server Side.",
+        circulating: "Had an Hands on Experience with different domains thereby exposed myself to different Stacks. Liked working with both UI and Server Side.",
         img: getInternIcon(),
         color: getCoinColor("BTC"),
         label1: "-Worked",
@@ -168,12 +169,19 @@ class Work extends Component {
             )
         }
 
+        let dynamicHoverContent;
+        if (isMobile) {
+            dynamicHoverContent = "Double Touch to Zoom out, Touch the Left Section(with half round icons) once and Swipe UP/DOWN. Touch anywhere else on the screen to experience Neural Web"
+        }
+        else
+            dynamicHoverContent = "Hover over the icon and Scroll UP/DOWN. Hover anywhere else on the screen to experince Neural Web";
+
         return (
             <div id="app" className={updating ? 'updating' : ''}>
                 <div id="particles" />
                 <div id="help-tooltip">
                     <i className="fa fa-question-circle-o" />
-                    <h1><span className="text">Hover over the icon and scroll.</span><span className="triangle" /></h1>
+                    <h1><span className="text">{dynamicHoverContent}</span><span className="triangle" /></h1>
                 </div>
                 {card}
             </div>
