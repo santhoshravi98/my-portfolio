@@ -1,7 +1,7 @@
 import HeaderItem from "../HeaderItem/HeaderItem.js";
 import HeaderItemsCss from '../HeaderItems/Headeritems.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Pdf from '../../../Assets/Documents/final.pdf';
+import Pdf from '../../../Assets/Documents/SanthoshRaviResume.pdf';
 
 import { faLaptop, faFileInvoice, faComments, faCompass } from '@fortawesome/free-solid-svg-icons'
 const Headeritems = (props) => {
