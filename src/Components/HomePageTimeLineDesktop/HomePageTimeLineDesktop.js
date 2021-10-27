@@ -64,7 +64,7 @@ const HomePageTimeLineDesktop = (props) => {
                         <h1 className="f3 text--accent ttu">College Of Engineering Guindy</h1>
                         <p>
                             Completed my Bachelors in Computer Science and Engineering in CEG. Learnt to Live Life, not Engineering. Words can't describe my beautiful college life. 
-                            CEG Memories will remain forever.
+                            CEG Memories will remain forever. One hell of a Ride.
             </p>
                     </div>
                 </div>
